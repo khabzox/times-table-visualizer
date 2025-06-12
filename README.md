@@ -2,6 +2,8 @@
 
 An interactive mathematical visualization that plots the n-th roots of unity on the complex plane and dynamically connects them using modular multiplication to reveal beautiful geometric patterns.
 
+![Demo](public/demo.png)
+
 ## 🔬 Mathematical Foundation
 
 ### Core Concept
