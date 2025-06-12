@@ -3,12 +3,12 @@ import { useRef, useEffect, useState } from 'react';
 
 export default function Page() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [multiplier, setMultiplier] = useState(53);
+  const [multiplier, setMultiplier] = useState(2);
   const [points, setPoints] = useState(200);
 
   useEffect(() => {
     const canvas = canvasRef.current!;
-    const ctx = canvas.getContext('2d')!;
+    const ctx = canvas.getContext('2d') as CanvasRenderingContext2D;
     const w = canvas.width = window.innerWidth;
     const h = canvas.height = window.innerHeight;
     const cx = w / 2;
