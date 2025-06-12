@@ -1,4 +1,4 @@
-import { UnityRootsVisualization } from '@/components/unity-roots';
+import { UnityRootsVisualization } from '@/components';
 
 export default function Home() {
   return <UnityRootsVisualization />;

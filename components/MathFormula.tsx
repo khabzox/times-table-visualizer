@@ -37,7 +37,7 @@ export default function MathFormula({
         return (
             <div className="absolute top-4 right-4 p-3 items-start flex flex-col gap-2 bg-black/80 rounded-lg text-white text-xs">
                 <p className="font-mono">zₖ = exp(2πik/{points})</p>
-                <p className="font-mono">k' ≡ {multiplier.toFixed(2)}×k [{points}]</p>
+                <p className="font-mono">k&apos; ≡ {multiplier.toFixed(2)}×k [{points}]</p>
                 {patternName && <p className="font-mono">{patternName}</p>}
             </div>
         );

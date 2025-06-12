@@ -6,7 +6,7 @@ export const isPrime = (num: number): boolean => {
     return true;
 };
 
-export const getPatternName = (mult: number, n: number): string => {
+export const getPatternName = (mult: number): string => {
     const m = Math.round(mult);
     if (m === 2) return 'Cardioid';
     if (m === 3) return 'Nephroid';
