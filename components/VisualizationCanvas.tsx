@@ -3,12 +3,12 @@ import { useCallback } from 'react';
 import { VisualizationCanvasProps } from '@/types/unity-roots';
 
 export const useVisualization = ({
-  canvasRef,
-  points,
-  showPoints,
-  showCircle,
-  colorMode,
-  lineWidth
+    canvasRef,
+    points,
+    showPoints,
+    showCircle,
+    colorMode,
+    lineWidth
 }: VisualizationCanvasProps) => {
     const drawVisualization = useCallback((currentMultiplier: number) => {
         const canvas = canvasRef.current;
@@ -24,6 +24,7 @@ export const useVisualization = ({
         const radius = Math.min(cx, cy) * 0.8;
 
         // Clear canvas with gradient background
+        ctx.fillStyle = 'black';
         ctx.fillRect(0, 0, w, h);
 
         // Calculate coordinates (n-th roots of unity)
@@ -56,7 +57,6 @@ export const useVisualization = ({
                 continue;
             }
 
-            // Color based on mode
             let color;
             switch (colorMode) {
                 case 'rainbow':
@@ -97,7 +97,7 @@ export const useVisualization = ({
                 }
             });
         }
-    }, [points, showPoints, showCircle, colorMode, lineWidth]);
+    }, [canvasRef, points, showPoints, showCircle, colorMode, lineWidth]);
 
     return { drawVisualization };
 };

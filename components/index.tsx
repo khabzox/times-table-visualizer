@@ -104,7 +104,7 @@ export const UnityRootsVisualization = () => {
             <MathFormula
                 points={points}
                 multiplier={isAnimating ? animationMultiplier : multiplier}
-                patternName={getPatternName(isAnimating ? animationMultiplier : multiplier, points)}
+                patternName={getPatternName(isAnimating ? animationMultiplier : multiplier)}
             />
         </main>
     );
